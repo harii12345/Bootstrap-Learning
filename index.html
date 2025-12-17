@@ -3,87 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medical Rawalpindi</title>
-    <!-- Bootsrap CSS Section -->
-    <link href="/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <title>Medical App</title>
+    <!-- Bootstrap CSS -->
+    <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     
-<!-- Main Webpage Section -->
-    <section>
-<!-- container-fluid -->
- <div class="container-fluid">
-    <!-- Row -->
-    <div class="row">
-        <!-- Columun Sidebar -->
-        <div class="col-2">
-            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
-  Toggle static offcanvas
-</button>
-
-<div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="staticBackdropLabel">Offcanvas</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <div>
-      I will not close if you click outside of me.
-    </div>
-  </div>
-</div>
-
-        </div>
-        <!-- Column Main Content -->
-        <div class="col-10">
-              <nav class="navbar navbar-expand-lg bg-danger navbar-dark">
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Services
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Web Development</a></li>
-                            <li><a class="dropdown-item" href="#">App Development</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#"> SEO</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+            <!-- Logo -->
+                   <img src="./assets/svg/logo.svg">
+            <!-- Logo and Hamburger Menu -->
+            <div class="d-flex align-items-center">
+                <button class="btn icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu">
+                   <img src="./assets/svg/humburger icon.svg">
+                </button>
+                
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <div class="input-group">
+                    <span class="input-group-text bg-white border-end-0" style="border-radius: 20px 0 0 20px;">
+                        <i class="bi bi-search"></i>
+                    </span>
+                    <input type="text" class="form-control border-start-0 search-input" placeholder="Search Patient" style="border-radius: 0 20px 20px 0;">
+                </div>
+            </div>
+
+            <!-- Right Side Icons -->
+            <div class="d-flex align-items-center">
+                <button class="icon-btn">
+                    <img src="./assets/svg/boxes.svg">
+                    <span class="badge-notification">3</span>
+                </button>
+                <button class="icon-btn">
+                    <i class="bi bi-chat-dots"></i>
+                    <span class="badge-notification">5</span>
+                </button>
+                <button class="icon-btn">
+                    <i class="bi bi-arrow-clockwise"></i>
+                </button>
+                <button class="icon-btn">
+                    <i class="bi bi-question-circle"></i>
+                </button>
+                <button class="icon-btn">
+                    <i class="bi bi-gear"></i>
+                </button>
+                <button class="icon-btn">
+                    <i class="bi bi-grid-3x3-gap"></i>
+                </button>
+                
+                <!-- Organization Selector -->
+                <div class="dropdown ms-3">
+                    <button class="org-selector dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-building"></i> Blue Lagoon Clinic
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Blue Lagoon Clinic</a></li>
+                        <li><a class="dropdown-item" href="#">Green Valley Hospital</a></li>
+                        <li><a class="dropdown-item" href="#">Sunset Medical Center</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
 
+    <!-- Offcanvas Sidebar -->
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="sidebarMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-house-door"></i> Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-people"></i> Patients</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-calendar"></i> Appointments</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-file-medical"></i> Records</a>
+                </li>
+            </ul>
         </div>
     </div>
- </div>
- 
 
- <!-- Section End -->
-    </section>
+    <!-- Main Content Area -->
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Sidebar Column -->
+            <div class="col-auto" style="width: 70px;">
+                <div class="d-flex flex-column align-items-center">
+                    <button class="btn btn-light   mb-2 p-2 mt-3">
+                       <img src="./assets/svg/boxes.svg">
+                    </button>
+                    <button class="btn btn-light   mb-2 p-2 mt-3">
+                       <img src="./assets/svg/Building Store.svg">
+                    </button>
+                    <button class="btn btn-light   mb-2 p-2 mt-3">
+                       <img src="./assets/svg/user.svg">
+                    </button>
+                     <button class="btn btn-light   mb-2 p-2 mt-3">
+                       <img src="./assets/svg/mail.svg">
+                    </button>
+                     
+                     <button class="btn btn-light   mb-2 p-2 mt-3">
+                       <img src="./assets/svg/document.svg">
+                    </button>
+                </div>
+            </div>
+            <!-- Main Content Column -->
+            <div class="col">
+                <h3>Welcome to Medical Dashboard</h3>
+                <p>Your content goes here...</p>
+            </div>
+        </div>
+    </div>
 
-    <!-- Javascipt Bootstrap Section-->
-     <script src="/Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
